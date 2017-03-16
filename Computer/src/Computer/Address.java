@@ -7,16 +7,16 @@ public class Address implements Operand{
 	 this.index = index;
  }
 
-
 @Override
-public Word getWord() {
-	// TODO Auto-generated method stub
-	return null;
+public Word getWord(Memory memory) {
+	return memory.getWord(this);
 }
 
-@Override
 public int getValue() {
-	// TODO Auto-generated method stub
-	return 0;
+	return index;
+}
+
+public String toString(){
+	return "[" + index + "]";
 }
 }

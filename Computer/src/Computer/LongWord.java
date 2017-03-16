@@ -8,38 +8,36 @@ public class LongWord implements Word{
 	}
 	
 	@Override
-	public Word getWord() {
-		// TODO Auto-generated method stub
-		return null;
+	public Word getWord(Memory memory) {
+		return this;
 	}
 
 	@Override
-	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
+	public long getValue() {
+		return value;
 	}
 
 	@Override
 	public void add(Word word1, Word word2) {
-		// TODO Auto-generated method stub
+		this.value = (long) word1.getValue() + (long) word2.getValue(); 
 		
 	}
 
 	@Override
 	public void mul(Word word1, Word word2) {
-		// TODO Auto-generated method stub
+		this.value = word1.getValue() * word2.getValue();
 		
 	}
 
 	@Override
-	public void equals(Word word) {
-		// TODO Auto-generated method stub
+	public boolean equals(Word word) {
+		return (this.value == (long) word.getValue());
 		
 	}
 	
 	@Override
 	public String toString(){
-		return "";
+		return "" + value;
 	}
 
 }

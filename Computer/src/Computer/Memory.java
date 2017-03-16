@@ -9,7 +9,7 @@ public abstract class Memory {
 		memory = setMemory();
 	}
 	
-	public void getWord(Address adress){
-		
+	public Word getWord(Address adress){
+		return memory[adress.getValue()];
 	}
 }

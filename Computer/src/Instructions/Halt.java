@@ -1,6 +1,7 @@
 package Instructions;
 
 import Computer.Memory;
+import Computer.ProgramCounter;
 
 public class Halt implements Command{
 
